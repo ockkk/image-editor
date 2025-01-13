@@ -1,14 +1,11 @@
 import { KonvaEventObject } from "konva/lib/Node";
 import { Text } from "react-konva";
 import { Html } from "react-konva-utils";
-import { TextObject } from "../models/TextObject";
+import { useEditor } from "../../hooks/useEditor";
 
-interface EditableTextLayerProps {
-  texts: TextObject[];
-  setTexts: (texts: TextObject[]) => void;
-}
+export function EditableTextLayer() {
+  const { texts, setTexts } = useEditor();
 
-export function EditableTextLayer({ texts, setTexts }: EditableTextLayerProps) {
   const handleTextEdit = (id: number) => {
     setTexts(
       texts.map((t) => ({
@@ -205,7 +202,7 @@ export function EditableTextLayer({ texts, setTexts }: EditableTextLayerProps) {
                       color: "#333",
                     }}
                   >
-                    저장
+                    닫기
                   </button>
                   <button
                     onClick={() => handleDelete(textObj.id)}

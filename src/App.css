@@ -40,3 +40,51 @@
 .read-the-docs {
   color: #888;
 }
+
+.root-button-container {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 20px 0;
+
+  textarea {
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    outline: none;
+    flex: 1;
+    resize: vertical;
+    min-height: 40px;
+    font-family: inherit;
+  }
+
+  label {
+    padding: 7px 12px;
+    background-color: #6c5ce7;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+}
+
+.opacity-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.opacity-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
